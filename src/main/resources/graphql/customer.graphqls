@@ -1,0 +1,15 @@
+type Customer {
+    id: ID!
+    firstName: String!
+    lastName: String!
+}
+
+type Query {
+    findAllCustomers: [Customer]!
+    findCustomer(id: Int): Customer
+    countCustomers: Long!
+}
+
+type Mutation {
+    newCustomer(firstName: String!, lastName: String!) : Customer!
+}

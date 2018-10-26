@@ -1,0 +1,15 @@
+type Project {
+    id: ID!
+    name: String!
+    users: [User]!
+    tickets: [Ticket]
+}
+
+extend type Query {
+    findAllProjects: [Project]
+    project(id: Int): Project
+}
+
+extend type Mutation {
+    newProject(name: String!): Project
+}

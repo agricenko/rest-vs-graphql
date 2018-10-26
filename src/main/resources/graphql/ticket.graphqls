@@ -1,0 +1,15 @@
+type Ticket {
+    id: ID!
+    description: String!
+    project: Project!
+    reporterUser: User!
+    assigneeUser: User!
+}
+
+extend type Query {
+    findAllTickets: [Ticket]
+}
+
+extend type Mutation {
+    newTicket(description: String!, projectId: ID!, reporterUser: ID!, assigneeUser: ID!): Ticket
+}

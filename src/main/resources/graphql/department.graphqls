@@ -1,0 +1,9 @@
+type Department {
+    id: ID!
+    description: String!
+    users: [User]
+}
+
+extend type Query {
+    findAllDepartments: [Department]!
+}
